@@ -19,7 +19,7 @@ export default function Header() {
           </Link>
           <Separator orientation="vertical" />
           <Link
-            href="https://github.com/danielwsms/mxbai-movie-search"
+            href="https://github.com/danielwsms/mxbai-financial-reports"
             target="_blank"
           >
             Code

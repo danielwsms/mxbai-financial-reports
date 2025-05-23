@@ -38,7 +38,6 @@ INSTRUCTIONS:
 - Do not make assumptions or inferences beyond what is explicitly stated in the documents`,
   };
 
-  // Generate the AI answer
   const result = await generateText({
     model: google("gemini-2.0-flash"),
     messages: [systemMessage, { role: "user", content: query }],
