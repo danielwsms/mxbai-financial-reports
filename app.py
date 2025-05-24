@@ -90,7 +90,7 @@ INSTRUCTIONS:
 - Only use information explicitly stated in the documents"""
 
         response = client.models.generate_content(
-            model="gemini-2.0-flash-exp", contents=prompt
+            model="gemini-2.5-flash-preview-05-20", contents=prompt
         )
 
         return response.text
