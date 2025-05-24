@@ -68,10 +68,3 @@ A Streamlit application that enables intelligent question-answering over financi
 2. **Document Retrieval**: The most relevant document chunks are retrieved from the vector stores
 3. **Visual Display**: Retrieved document images are displayed in a grid layout with relevance scores
 4. **Answer Generation**: Google's Gemini model analyzes the retrieved documents and generates a precise answer
-
-## Example Questions
-
-- "What was the revenue for Q3?"
-- "Show me the cash flow statement"
-- "What are the main risk factors mentioned?"
-- "What was the net income this quarter?"
