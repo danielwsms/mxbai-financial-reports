@@ -153,7 +153,7 @@ def main():
 
                                 if image_data:
                                     try:
-                                        st.image(image_data, use_container_width=True)
+                                        st.image(image_data, width=200)
                                     except:
                                         st.error("Could not display image")
                                 else:

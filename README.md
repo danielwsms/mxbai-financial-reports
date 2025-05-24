@@ -20,7 +20,7 @@ A Streamlit application that enables intelligent question-answering over financi
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/danielwsms/mxbai-financial-reports
    cd mxbai-financial-reports
    ```
 
