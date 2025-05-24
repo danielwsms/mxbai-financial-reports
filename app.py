@@ -77,18 +77,17 @@ def generate_answer_with_gemini(query, context_chunks, google_api_key):
             ]
         )
 
-        prompt = f"""Answer the user's question precisely and directly using only the provided financial report information below.
+        prompt = f"""Based on the financial report information provided below, please provide a concise answer to the user's question, using only the first sentence.
+
+QUESTION: {query}
 
 RETRIEVED DOCUMENTS:
 {context}
 
 INSTRUCTIONS:
-- Focus solely on the user's specific question
-- Answer only what is asked - do not provide additional information or context
-- Use only information from the provided documents
-- If the answer is not in the documents, state "This information is not available in the provided documents"
-- Be concise and direct
-- Do not make assumptions or inferences beyond what is explicitly stated in the documents"""
+- Answer the question directly and concisely
+- If the information is not available in the documents, state "This information is not available in the provided documents"
+- Only use information explicitly stated in the documents"""
 
         response = client.models.generate_content(
             model="gemini-2.0-flash-exp", contents=prompt
