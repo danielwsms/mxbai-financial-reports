@@ -12,9 +12,14 @@ A Streamlit application that enables intelligent question-answering over financi
 ## Prerequisites
 
 - Python 3.11+
-- Mixedbread AI API key
+- Mixedbread AI API key ([Get API key here](https://www.platform.mixedbread.com/))
 - Google AI API key
 - Financial report PDF files for ingestion
+
+## Resources
+
+- **[Mixedbread Documentation](https://www.mixedbread.com/docs)** - Complete API documentation and guides
+- **[Mixedbread Platform](https://www.platform.mixedbread.com/)** - Sign up and manage your API keys
 
 ## Setup
 
