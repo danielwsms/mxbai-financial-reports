@@ -127,6 +127,9 @@ def main():
             st.error("Please enter a search query")
             return
 
+        st.divider()
+        st.header("Retrieved Documents")
+
         with st.spinner("Searching through your documents..."):
             search_results = search_vector_stores(
                 query, config["vector_store_ids"], config["mixedbread_api_key"], top_k
@@ -136,9 +139,6 @@ def main():
             chunks = search_results["data"]
 
             if chunks:
-                st.divider()
-                st.header(f"Retrieved Documents")
-
                 cols_per_row = 10
                 for i in range(0, len(chunks), cols_per_row):
                     cols = st.columns(cols_per_row)
@@ -162,13 +162,15 @@ def main():
                                 score = chunk.get("score", 0)
                                 st.metric("Score", f"{score:.3f}")
 
+                st.divider()
+                st.header("Answer")
+
                 with st.spinner("Generating answer..."):
                     answer = generate_answer_with_gemini(
                         query, chunks, config["google_api_key"]
                     )
-                st.divider()
+
                 if answer:
-                    st.header("Answer")
                     st.info(answer)
             else:
                 st.warning(
