@@ -114,34 +114,12 @@ def main():
             "Number of chunks to retrieve", min_value=1, max_value=20, value=10
         )
 
-        # Add banner at bottom of sidebar
         st.divider()
-        st.markdown("### Resources")
-
-        col1, col2 = st.columns(2)
-        with col1:
-            st.markdown(
-                """
-                <a href="https://www.mixedbread.com/docs" target="_blank" style="text-decoration: none;">
-                    <div style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); padding: 8px; border-radius: 5px; text-align: center; color: white; font-weight: bold; font-size: 12px;">
-                        📚 Docs
-                    </div>
-                </a>
-                """,
-                unsafe_allow_html=True,
-            )
-
-        with col2:
-            st.markdown(
-                """
-                <a href="https://github.com/danielwsms/mxbai-financial-reports" target="_blank" style="text-decoration: none;">
-                    <div style="background: linear-gradient(45deg, #333, #666); padding: 8px; border-radius: 5px; text-align: center; color: white; font-weight: bold; font-size: 12px;">
-                        ⭐ GitHub
-                    </div>
-                </a>
-                """,
-                unsafe_allow_html=True,
-            )
+        st.subheader("Resources")
+        st.link_button("Documentation", "https://www.mixedbread.com/docs")
+        st.link_button(
+            "GitHub", "https://github.com/danielwsms/mxbai-financial-reports"
+        )
 
     query = st.text_input(
         "Ask your question:", placeholder="Enter your question here..."
