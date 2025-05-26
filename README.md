@@ -1,4 +1,4 @@
-# Vision RAG over Financial Reports
+# Financial rag QA
 
 A Streamlit application that enables intelligent question-answering over financial report documents using vision-based Retrieval-Augmented Generation (RAG).
 
